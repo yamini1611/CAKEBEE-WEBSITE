@@ -1,0 +1,150 @@
+{
+  "specials": [
+    {
+      "id": 1,
+      "name": "Creamy Cloud Cheesecake",
+      "price": 1450,
+      "image": "\\asset\\images\\cake1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Oreo cheese Burst Cake",
+      "price": 1250,
+      "image": "asset\\images\\cake2.jpg"
+    },
+    {
+      "id": 3,
+      "name": "KitKat Hazelnut Indulgence",
+      "price": 1345,
+      "image": "asset\\images\\cakes6.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Ocean Mist Macaron Cake",
+      "price": 1345,
+      "image": "asset\\images\\cake7.webp"
+    },
+    {
+      "id": 5,
+      "name": "Stormy Grey Macaron Bliss",
+      "price": 1460,
+      "image": "asset\\images\\cake9.webp"
+    }
+  ],
+  "menu": [
+    {
+      "id": 6,
+      "name": "Lavender Chocalate Delight  ",
+      "price": 1550,
+      "image": "asset\\images\\cake4.webp"
+    },
+    {
+      "id": 7,
+      "name": "Vanilla Buttercream Cake",
+      "price": 1250,
+      "image": "asset\\images\\cake5.webp"
+    },
+    {
+      "id": 8,
+      "name": "Chocolate Espresso Delight",
+      "price": 1460,
+      "image": "asset\\images\\cake3.webp"
+    },
+    {
+      "id": 9,
+      "name": "KitKat Cookie choco Delight",
+      "price": 1460,
+      "image": "asset\\images\\cake8.jpg"
+    },
+    {
+      "id": 10,
+      "name": " Chocolate Mousse Magic ",
+      "price": 1460,
+      "image": "asset\\images\\cake10.webp"
+    }
+  ],
+  "order": [
+    {
+      "orderItems": [
+        {
+          "image": "asset\\images\\cakes6.jpg",
+          "name": "KitKat Hazelnut Indulgence",
+          "price": 1345
+        }
+      ],
+      "id": 1
+    },
+    {
+      "orderItems": [
+        {
+          "image": "asset\\images\\cake2.jpg",
+          "name": "Oreo cheese Burst Cake",
+          "price": 1250
+        }
+      ],
+      "id": 2
+    },
+    {
+      "orderItems": [
+        {
+          "image": "asset\\images\\cake10.webp",
+          "name": " Chocolate Mousse Magic ",
+          "price": 1460
+        }
+      ],
+      "id": 3
+    }
+  ],
+  "cartItems": [
+    {
+      "cartItems": [
+        {
+          "image": "asset\\images\\cake9.webp",
+          "name": "Stormy Grey Macaron Bliss",
+          "price": 1460
+        }
+      ],
+      "id": 8
+    },
+    {
+      "cartItems": [
+        {
+          "image": "asset\\images\\cake4.webp",
+          "name": "Lavender Chocalate Delight  ",
+          "price": 1550
+        }
+      ],
+      "id": 9
+    },
+    {
+      "cartItems": [
+        {
+          "image": "asset\\images\\cake10.webp",
+          "name": " Chocolate Mousse Magic ",
+          "price": 1460
+        }
+      ],
+      "id": 10
+    },
+    {
+      "cartItems": [
+        {
+          "image": "asset\\images\\cakes6.jpg",
+          "name": "KitKat Hazelnut Indulgence",
+          "price": 1345
+        }
+      ],
+      "id": 11
+    },
+    {
+      "cartItems": [
+        {
+          "image": "asset\\images\\cake4.webp",
+          "name": "Lavender Chocalate Delight  ",
+          "price": 1550
+        }
+      ],
+      "id": 13
+    }
+  ]
+}

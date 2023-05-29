@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Search Engine</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    /* CSS styles go here */
+    body {
+      font-family: Arial, sans-serif;
+    }
+    
+    #search-container {
+      text-align: center;
+      margin-top: 200px;
+    }
+    
+    #search-form {
+      display: inline-block;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    #search-input {
+      width: 400px;
+      height: 30px;
+      padding: 5px;
+      font-size: 16px;
+    }
+    
+    #search-button {
+      padding: 5px 10px;
+      font-size: 16px;
+    }
+    
+    #search-logo {
+      width: 150px;
+      height: 60px;
+    }
+    body{
+        background-image: url(/asset/images/login1.gif);
+        background-size: cover;
+        background-repeat: no-repeat;
+       
+    }
+  </style>
+</head>
+<body>
+  <div id="search-container">
+    <img id="search-logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo"><br>
+    <br><br><form id="search-form" onsubmit="navigateToURL(event)">
+      <input type="text" id="search-input" placeholder="Search">
+      <button type="submit" id="search-button"><i class="fas fa-search"></i></button>
+    </form>
+  </div>
+
+  <script>
+    function navigateToURL(event) {
+      event.preventDefault();
+      var searchInput = document.getElementById("search-input").value.toLowerCase();
+      var url;
+      
+      if (searchInput === "cakebee") {
+        url = "http://127.0.0.1:5500/index.html";
+      } else if (searchInput === "cgvak") {
+        url = "https://www.cgvakindia.com/";
+      } else if (searchInput === "w3school") {
+        url = "https://www.w3schools.com/";
+      } else {
+        url = "https://www.google.com/search?q=" + encodeURIComponent(searchInput);
+      }
+      
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>

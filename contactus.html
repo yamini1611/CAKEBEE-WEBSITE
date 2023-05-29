@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Innovative Cake Shop - Contact Us</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link rel="icon" type="image/x-icon" href="/asset/images/fi.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+  integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+  crossorigin="anonymous"></script>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</head>
+
+<body>
+  <header>
+    <!-- Your header content here -->
+    
+    <nav class="navbar navbar-expand-lg navbarbg-light" style="margin-left: 750px;">
+      <div class="container-fluid">
+   
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" id="tg" ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html"><i class="fas fa-heart"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="orders.html"><i class="fas fa-shopping-bag"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+  </header>
+
+  <main>
+    <section id="contact">
+      <div class="container">
+        <A href="/index.html" style="text-decoration: none; background-color: aliceblue;"  >back</A>
+        <h2>Contact Us</h2>
+        <p>If you have any questions, inquiries, or feedback, please feel free to contact us using the form below. We'll get back to you as soon as possible.</p>
+        <img src="/asset/images/contus.webp" height="200px" width="200px" style="float: right;margin-right: 600px;">
+        <form id="contact-form">
+          <label for="name">Name:</label><br>
+          <input type="text" id="name" name="name" required><br>
+
+          <label for="email">Email:</label><br>
+          <input type="email" id="email" name="email" required><br>
+
+          <label for="subject">Subject:</label><br>
+          <input type="text" id="subject" name="subject" required><br>
+
+          <label for="message">Message:</label><br>
+          <textarea id="message" name="message" required></textarea><br>
+
+          <button type="submit">Submit</button>
+        </form>
+
+        <div class="social-media">
+          <h3>Follow us on social media:</h3>
+          <ul>
+            <li><a href="https://www.facebook.com/YourFacebookPage" target="_blank"><a href="#" class="fa fa-facebook" ></a></li><br>
+            <li><a href="https://www.instagram.com/YourInstagramPage" target="_blank"><i class="fa fa-instagram"></i></a></li><br>
+            <li><a href="https://www.twitter.com/YourTwitterPage" target="_blank"><a href="#" class="fa fa-twitter"></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Cakebee. All rights reserved.</p>
+  </footer>
+
+  <!-- jQuery and jQuery Validation scripts -->
+  <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Initialize form validation on the contact form
+      $("#contact-form").validate({
+        rules: {
+          name: "required",
+          email: {
+            required: true,
+            email: true
+          },
+          subject: "required",
+          message: "required"
+        },
+        messages: {
+          name: "Please enter your name",
+          email: {
+            required: "Please enter your email address",
+            email: "Please enter a valid email address"
+          },
+          subject: "Please enter a subject",
+          message: "Please enter a message"
+        }
+      });
+    });
+  </script>
+</body>
+
+</html>

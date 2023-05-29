@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
+</head>
+<style>
+  #order-container,h1{
+     margin-left: 300px;
+     font-family: logo;
+     color: rgb(53, 0, 48);
+     font-size: 24px;
+  }
+  body{
+    background-image: url(/asset/images/bj.jpg);
+    background-size: contain;
+  }
+  @font-face {
+      font-family: logo;
+      src: url("/asset/fonts/Sobatyan-Regular.ttf");
+    }
+</style>
+<body>
+  <h1>Order Details</h1>
+  <div id="order-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    $(document).ready(function() {
+      // Fetch cake data from the JSON file
+      $.getJSON('cakes.json', function(data) {
+        var orderContainer = $('#order-container');
+        var orders = data.order;
+        var totalPrice = 0;
+
+        // Render each order
+        $.each(orders, function(orderIndex, order) {
+          var orderItems = order.orderItems;
+
+          var orderElement = $('<div class="order"></div>');
+
+          // Render the order items
+          $.each(orderItems, function(itemIndex, item) {
+            var orderItem = $('<div class="item"></div>');
+            orderItem.append('<img src="' + item.image + '" alt="' + item.name + '" id="sm" height="300px" width="300px">');
+            orderItem.append('<h4>' + item.name + '</h4>');
+            orderItem.append('<p>Price: ₹' + item.price + '</p>');
+            orderElement.append(orderItem);
+
+            totalPrice += item.price;
+          });
+
+          orderContainer.append(orderElement);
+        });
+
+        // Display the total price
+        orderContainer.append('<p>Total Price: ₹' + totalPrice + '</p>');
+      });
+
+      // Order button click event
+      $(document).on('click', '.order-button', function() {
+        Swal.fire({
+          title: 'Order Cake',
+          html:
+            '<label for="payment-method">Payment Method:</label>' +
+            '<select id="payment-method" class="swal2-input">' +
+            '  <option value="UPI">UPI</option>' +
+            '  <option value="Card">Card</option>' +
+            '</select>' +
+            '<label for="upi-id">UPI ID:</label>' +
+            '<input type="text" id="upi-id" class="swal2-input" placeholder="Enter UPI ID">' +
+            '<label for="amount">Amount:</label>' +
+            '<input type="number" id="amount" class="swal2-input" placeholder="Enter Amount">' +
+            '<p id="payment-details"></p>',
+          focusConfirm: false,
+          preConfirm: function() {
+            var paymentMethod = document.getElementById('payment-method').value;
+            var upiId = document.getElementById('upi-id').value;
+            var amount = document.getElementById('amount').value;
+
+            // Validate input fields
+            if (!paymentMethod || !upiId || !amount) {
+              Swal.showValidationMessage('Please fill in all fields');
+            } else {
+              return { paymentMethod: paymentMethod, upiId: upiId, amount: amount };
+            }
+          }
+        }).then(function(result) {
+          if (result.isConfirmed) {
+            var paymentMethod = result.value.paymentMethod;
+            var upiId = result.value.upiId;
+            var amount = result.value.amount;
+
+            // Process the payment
+            var paymentDetails = 'Payment Method: ' + paymentMethod + '<br>' +
+                                 'UPI ID: ' + upiId + '<br>' +
+                                 'Amount: ₹' + amount;
+
+            document.getElementById('payment-details').innerHTML = paymentDetails;
+
+            // Place the order
+            Swal.fire(
+              'Ordered!',
+              'Your cake has been ordered successfully.',
+              'success'
+            );
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+

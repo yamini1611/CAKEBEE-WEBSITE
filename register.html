@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+
+    <title>Document</title>
+    <script>
+        $(document).ready(function() {
+    $('#register-form').validate({
+      rules: {
+        name1: 'required',
+        email1: {
+          required: true,
+          email1: true
+        },
+        username1: 'required',
+        password1: 'required'
+      },
+      messages: {
+        name1: 'Please enter your name.',
+        email1: {
+          required: 'Please enter your email.',
+          email1: 'Please enter a valid email address.'
+        },
+        username1: 'Please enter a username.',
+        password1: 'Please enter a password.'
+      },
+      submitHandler: function(form) {
+        // Show the SweetAlert
+        Swal.fire({
+          icon: 'success',
+          title: 'Registration Successful',
+          text: 'Thank you for registering!',
+          onClose: function () {
+          
+            form.submit();
+             // Submit the form after the alert is closed
+             
+          }
+        });
+        window.location.href = 'index.html';
+      }
+    });
+  });
+    </script>
+</head>
+<body>
+    <div id="rh">
+        <div class="modal-content">
+          <span class="close" onclick="closeRegisterForm()">&times;</span>
+          <h2>Register</h2>
+          <form id="register-form" action="" method="get">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name1" name="name" required><br>
+    
+            <label for="email">Email:</label><br>
+            <input type="email" id="email1" name="email" required><br>
+    
+            <label for="username">Username:</label><br>
+            <input type="text" id="username1" name="username" required><br>
+    
+            <label for="password">Password:</label><br>
+            <input type="password" id="password1" name="password" required><br><br>
+    
+            <button type="submit" >Register</button>
+          </form>
+        </div>
+      </div>
+</body>
+</html>

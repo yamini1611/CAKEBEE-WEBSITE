@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cakebee</title>
+  <link rel="stylesheet" type="text/css" href="/css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <link rel="icon" type="image/x-icon" href="/asset/images/log1.png">
+  <script src="https://cdn.jsdelivr.net/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbarbg-light" style="margin-left: 750px;">
+      <div class="container-fluid">
+   
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" id="tg" ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contactus.html">Contact</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="cart.html"><i class="fas fa-heart"></i></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="orders.html"><i class="fas fa-shopping-bag"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+ 
+     <a href="orders.html"><button type="button" id="btn3">Order Now</button></a>
+  </header>
+  <div class="container">
+    <h2 ID="h2">VARIETIES</h2>
+  </div>
+  <div class="card-group">
+    <div class="card" id="card1">
+      <img src="/asset/images/card1.jpg" id="c1" class="card-img-top" alt="" height="300px">
+      <div class="card-body">
+
+        <div class="card-caption">ICE CREAM CAKE</div>
+      </div>
+
+    </div>
+    <div class="card" id="card2">
+      <img src="/asset/images/card2.jpg" id="c2" class="card-img-top" alt="" height="300px">
+      <div class="card-body">
+
+        <div class="card-caption">MACAROONS</div>
+      </div>
+
+    </div>
+    <div class="card" id="card3">
+      <img src="/asset/images/card3.webp" id="c3" class="card-img-top" alt="" height="300px">
+      <div class="card-body">
+
+        <div class="card-caption">PASTRIES</div>
+      </div>
+    </div>
+  </div>
+
+  <section id="home">
+    <div class="container">
+      <h2 id="ask">Home <img src="/asset/images/h1.png" height="30px" width="30px"></h2>
+      <p id="abt">Cakebee is a charming and delectable online cake shop that brings joy and sweetness to every occasion. Our
+        website showcases an extensive collection of innovative and beautifully crafted cakes and pastries that are sure
+        to tantalize your taste buds.<br><br>
+
+        At Cakebee, we take pride in our commitment to quality and creativity. Each cake is meticulously prepared using
+        the finest ingredients and adorned with artistic designs that will leave you in awe. From classic flavors to
+        unique creations, our cakes cater to diverse preferences and dietary needs, ensuring there's something for
+        everyone.<br><br>
+
+        With our user-friendly website, you can easily navigate through different cake categories, explore featured
+        collections, and read customer reviews to make an informed choice. Whether you're celebrating a birthday,
+        anniversary, wedding, or any special occasion, Cakebee has the perfect cake to make your event memorable.<br><br>
+
+        In addition to our exceptional cakes, we also offer a convenient and secure online ordering system. Simply add
+        your favorite cakes to the cart, proceed to checkout, and select your preferred delivery option. We ensure
+        timely and reliable delivery, so you can enjoy your cake fresh and ready to be savored.<br><br>
+
+        Stay connected with Cakebee on popular social media platforms like Facebook, Instagram, and Twitter, where we
+        share delightful cake inspirations, behind-the-scenes glimpses, and exciting promotions. Join our vibrant
+        community of cake enthusiasts and let us make your sweetest dreams come true.<br><br>
+
+        Indulge in the divine world of cakes with Cakebee and experience the perfect blend of flavor, artistry, and
+        happiness.</p>
+    </div>
+  </section><br><br>
+  <div id="#cr">
+  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" id="ca11">
+        <img src="/asset/images/caro1.png" class="d-block w-100" alt="img1" id="cimg" height="300px" width="10px">
+        
+      </div>
+      <div class="carousel-item" id="ca11">
+        <img src="/asset/images/caro2.png" class="d-block w-100" alt="img2" id="cimg"height="300px" width="10px">
+       
+      </div>
+      <div class="carousel-item" id="ca11">
+        <img src="/asset/images/caro3.png" class="d-block w-100" alt="img3"id="cimg" height="300px" width="50px">
+     
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+  <main>
+    <section id="home1">
+
+      <section id="specials"><br>
+        <h2 style="padding-left: 0px;" id="h2">Best Selling Cakes</h2><br>
+        <div style="padding-left: 12px;padding-top: 15px;padding-right: 15px;padding-bottom: 10px;" id="specials-container"></div>
+      </section>
+      <br>
+      <section id="menu">
+        <h2 style="padding-left: 0px;" id="h2">Today's Special</h2><br>
+        <div style="padding-left: 12px;padding-top: 15px;padding-right: 15px;padding-bottom: 10px;" id="menu-container"></div>
+      </section>
+  </main>
+
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLoginForm()">&times;</span>
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+  <div id="register-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeRegisterForm()">&times;</span>
+      <h2>Register</h2>
+      <form id="register-form" action="" method="get">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name1" name="name" required><br>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email1" name="email" required><br>
+
+        <label for="username">Username:</label><br>
+        <input type="text" id="username1" name="username" required><br>
+
+        <label for="password">Password:</label><br>
+        <input type="password" id="password1" name="password" required><br><br>
+
+        <button type="submit">Register</button>
+      </form>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="container">
+      <h2  id="ask">About Us</h2>
+      <p id="abt">We are not just a bakery, we are not just bakers. In fact, we are just like you, a bunch of food lovers
+        fascinated with sweet indulgence, who dreamt of creating an appetizing fairy land of divine delicacies that
+        relishes the utmost desires.<br><br>
+        <img src="/asset/images/abtus.avif" style="float: right; margin-left: 50px; " id="abt1" height="300px" width="300px">
+        1 . Beginning with finest flour mixed with our passion, sprinkling some sugar and butter, blending it with our
+        deepest emotions to create a perfect batter. Kindling it in the oven with our warmth and finally crafting the
+        intricate creations in the form of some lip-smacking cakes, which are out of this world! The only additives
+        you'll find in our products are an extra pinch of love, care and devotion!<br><br>
+
+        2 . We add our magical touch to our recipe, to bring out the flavor and oomph into everything. With fresh
+        ingredients and some traditional methods, we craft some one-of-a-kind cakes baked-fresh-from-the-oven to excel
+        your taste buds.<br><br>
+
+        3 . And then, to fill up each celebratory moment with euphoria and excitement, we put in our heart and soul in
+        delivering the luscious cake at just the right time because we understand! We understand the emotions attached
+        to the occasion and so, we always make an effort to add to your happy moments.
+        We are here to redefine the all-time classics to create some heavenly and unforgettable experiences. And with
+        all this and more, we wish to fill the empty spaces<br> in every conversation with a smile.
+      </p>
+    </div>
+  </section>
+  <footer>
+    <p>&copy; 2023 Cakebee . All rights reserved.</p>
+  </footer>
+
+  <script src="/script.js"></script>
+
+</body>
+
+</html>
