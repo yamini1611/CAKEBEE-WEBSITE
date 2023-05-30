@@ -15,7 +15,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
 </head>
+<style>
 
+  #g6{
+    float: right;
+    margin-right:300px;
+  }
+</style>
 <body>
   <header>
     <!-- Your header content here -->
@@ -57,7 +63,7 @@
         <A href="/index.html" style="text-decoration: none; background-color: aliceblue;"  >back</A>
         <h2>Contact Us</h2>
         <p>If you have any questions, inquiries, or feedback, please feel free to contact us using the form below. We'll get back to you as soon as possible.</p>
-        <img src="/asset/images/contus.webp" height="200px" width="200px" style="float: right;margin-right: 600px;">
+        <img src="/asset/images/contus.webp" id="g6" height="200px" width="200px" >
         <form id="contact-form">
           <label for="name">Name:</label><br>
           <input type="text" id="name" name="name" required><br>
@@ -72,14 +78,14 @@
           <textarea id="message" name="message" required></textarea><br>
 
           <button type="submit">Submit</button>
-        </form>
+        </form><br>
 
         <div class="social-media">
           <h3>Follow us on social media:</h3>
           <ul>
-            <li><a href="https://www.facebook.com/YourFacebookPage" target="_blank"><a href="#" class="fa fa-facebook" ></a></li><br>
-            <li><a href="https://www.instagram.com/YourInstagramPage" target="_blank"><i class="fa fa-instagram"></i></a></li><br>
-            <li><a href="https://www.twitter.com/YourTwitterPage" target="_blank"><a href="#" class="fa fa-twitter"></a></li>
+            <li><a href="https://www.facebook.com/YourFacebookPage" target="_blank">Facebook<a href="#" class="fa fa-facebook" ></a></li><br>
+            <li><a href="https://www.instagram.com/YourInstagramPage" target="_blank">Instagram<i class="fa fa-instagram"></i></a></li><br>
+            <li><a href="https://www.twitter.com/YourTwitterPage" target="_blank">Twitter<a href="#" class="fa fa-twitter"></a></li>
           </ul>
         </div>
       </div>

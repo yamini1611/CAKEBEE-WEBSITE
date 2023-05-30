@@ -67,70 +67,31 @@
     {
       "orderItems": [
         {
-          "image": "asset\\images\\cakes6.jpg",
-          "name": "KitKat Hazelnut Indulgence",
-          "price": 1345
+          "image": "\\asset\\images\\cake1.jpg",
+          "name": "Creamy Cloud Cheesecake",
+          "price": 1450
         }
       ],
       "id": 1
-    },
+    }
+  ],
+  "sales": [
     {
-      "orderItems": [
-        {
-          "image": "asset\\images\\cake2.jpg",
-          "name": "Oreo cheese Burst Cake",
-          "price": 1250
-        }
-      ],
-      "id": 2
-    },
-    {
-      "orderItems": [
-        {
-          "image": "asset\\images\\cake10.webp",
-          "name": " Chocolate Mousse Magic ",
-          "price": 1460
-        }
-      ],
-      "id": 3
+      "paymentMethod": "Card",
+      "cost": "660",
+      "deliveryDate": "2023-11-11",
+      "message": "happy birthday",
+      "size": "1/2",
+      "cakeName": "choco truffle cake",
+      "id": 1
     }
   ],
   "cartItems": [
     {
       "cartItems": [
         {
-          "image": "asset\\images\\cake9.webp",
-          "name": "Stormy Grey Macaron Bliss",
-          "price": 1460
-        }
-      ],
-      "id": 8
-    },
-    {
-      "cartItems": [
-        {
-          "image": "asset\\images\\cake4.webp",
-          "name": "Lavender Chocalate Delight  ",
-          "price": 1550
-        }
-      ],
-      "id": 9
-    },
-    {
-      "cartItems": [
-        {
-          "image": "asset\\images\\cake10.webp",
-          "name": " Chocolate Mousse Magic ",
-          "price": 1460
-        }
-      ],
-      "id": 10
-    },
-    {
-      "cartItems": [
-        {
-          "image": "asset\\images\\cakes6.jpg",
-          "name": "KitKat Hazelnut Indulgence",
+          "image": "asset\\images\\cake7.webp",
+          "name": "Ocean Mist Macaron Cake",
           "price": 1345
         }
       ],
@@ -139,12 +100,12 @@
     {
       "cartItems": [
         {
-          "image": "asset\\images\\cake4.webp",
-          "name": "Lavender Chocalate Delight  ",
-          "price": 1550
+          "image": "asset\\images\\cake2.jpg",
+          "name": "Oreo cheese Burst Cake",
+          "price": 1250
         }
       ],
-      "id": 13
+      "id": 12
     }
   ]
 }

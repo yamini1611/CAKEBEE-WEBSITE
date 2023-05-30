@@ -8,13 +8,24 @@ body {
     src: url("/asset/fonts/Sobatyan-Regular.ttf");
   }
   header {
-   
+    
     padding: 20px;
-    height: 400px;
+    height: 250px;
     background-image: url(/asset/images/ban12.jpg);
     text-align: center;
     background-size: 100%;
     background-repeat: no-repeat;
+  }
+   #head-div{
+    margin-top: -130px;
+    background-color: #350335ee ;
+   }
+
+  @media (min-width:1435px) and (max-width:1900px)
+  {
+    header{
+      height: 400px;
+    }
   }
   @media(min-width:560px) and (max-width:768px){
     nav ul li {
@@ -42,7 +53,7 @@ body {
   #btn3{
     position: absolute;
     margin-left: 305px;
-    margin-top: 190px;
+    margin-top: 250px;
     background-color: #580748;
     color: rgb(247, 231, 12);
     padding-top: 2px;
@@ -67,9 +78,9 @@ body {
     font-size: 20px;
   }
 
-  nav ul li a {
+  #navbarNavDropdown ul li a {
     text-decoration: none;
-    color: #333;
+    color: #f1eaea;
     font-family: logo;
   }
 
@@ -105,10 +116,9 @@ body {
 
   }
   .item:hover{
-    height: 450px;
-    width: 300px;
+    transition : 0.3s ease-in-out;
     box-shadow: 0 0 28px rgba(0, 0, 0, 0.3);
-
+    background-color: #8a6b6bc0;
   }
   .item img {
     max-width: 100%;
@@ -449,3 +459,79 @@ footer {
   text-decoration: none;
   background-color: #55ACEE;
 }
+
+#navbarstyling{
+  position: absolute;
+  display: inline-block;
+  padding-top: 75px;
+  margin-top: 90px;
+  
+}
+#himg{
+  margin-top: 120px;
+}
+.nav-link{
+  color: #ffffff;
+}
+@keyframes scaleAndColorChange {
+  0% { transform: scale(1); color: red; }
+  25% { transform: scale(1.2); color: rgb(20, 211, 201); }
+  50% { transform: scale(1.4); color: rgb(233, 236, 5); }
+  75% { transform: scale(1.2); color: orange; }
+  100% { transform: scale(1); color: rgb(248, 233, 248); }
+}
+
+#gh1 {
+  animation: scaleAndColorChange 5s infinite;
+  margin-top: -150px;
+  font-family: logo;
+  font-size: 46px;
+  padding-bottom: 100px;
+}
+/* ----------------------------- */
+
+@import url("https://fonts.googleapis.com/css?family=Raleway:900&display=swap");
+
+body {
+    margin: 0px;
+}
+
+#container {
+    position: absolute;
+    margin: auto;
+    width: 100vw;
+    height: 80pt;
+    top: -350px;
+    bottom: 0;
+    margin-left: 40px;
+
+    filter: url(#threshold) blur(0.6px);
+}
+
+#text1,
+#text2 {
+    position: absolute;
+    width: 100%;
+    display: inline-block;
+    color: #f7f7f7;
+    font-family: "Raleway", sans-serif;
+    font-size: 50pt;
+    animation: scaleAndColorChange 5s infinite;
+    text-align: center;
+
+    user-select: none;
+}
+#emoji{
+  font-size: 75px;
+  margin-left: 1300px;
+  margin-top: 5px;
+}
+
+@keyframes scaleAndColorChange {
+  0% { transform: scale(1); color: red; }
+  25% { transform: scale(1.2); color: rgb(223, 153, 24); }
+  50% { transform: scale(1.4); color: rgb(222, 241, 111); }
+  75% { transform: scale(1.2); color: rgb(68, 167, 233); }
+  100% { transform: scale(1); color: rgb(245, 245, 245); }
+}
+
