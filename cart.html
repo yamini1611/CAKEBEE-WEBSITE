@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Cart</title>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
   <style>
     body {
       background-image: url(asset/images/c1.jpg);
@@ -67,17 +69,20 @@
     .buy-now-button:hover {
       background-color: #bb21a1;
     }
+
     @font-face {
       font-family: logo;
       src: url("/asset/fonts/Sobatyan-Regular.ttf");
     }
-    #total-price{
+
+    #total-price {
       font-size: 35px;
       color: #3a0231;
 
     }
   </style>
 </head>
+
 <body onload="loadCartItems()">
   <a href="index.html" id="b1">Back</a>
   <h1>Cart Items</h1>
@@ -89,7 +94,7 @@
       var cartItemsContainer = document.getElementById('cart-items-container');
       var xhr = new XMLHttpRequest();
 
-      xhr.onreadystatechange = function() {
+      xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
           var data = JSON.parse(xhr.responseText);
 
@@ -105,9 +110,9 @@
             cartItemsContainer.appendChild(emptyMessage);
           } else {
             // Render the cart items
-            data.forEach(function(item) {
+            data.forEach(function (item) {
               var selectedCakes = item.cartItems;
-              selectedCakes.forEach(function(cake) {
+              selectedCakes.forEach(function (cake) {
                 var cartItem = document.createElement('div');
                 cartItem.className = 'cart-item';
 
@@ -124,16 +129,15 @@
                 var removeButton = document.createElement('button');
                 removeButton.textContent = 'Remove from Cart';
                 removeButton.className = 'remove-button';
-                removeButton.onclick = function() {
+                removeButton.onclick = function () {
                   removeFromCart(item.id, cake.id);
                 };
 
                 var buyNowButton = document.createElement('button');
                 buyNowButton.textContent = 'Buy Now';
                 buyNowButton.className = 'buy-now-button';
-                buyNowButton.onclick = function() {
-                  redirectToOrders();
-                };
+                buyNowButton.onclick = buyNow; // Add this line to assign the buyNow function to onclick event
+
 
                 cartItem.appendChild(image);
                 cartItem.appendChild(name);
@@ -146,9 +150,9 @@
             });
 
             // Calculate the total price
-            var totalPrice = data.reduce(function(acc, item) {
+            var totalPrice = data.reduce(function (acc, item) {
               var selectedCakes = item.cartItems;
-              var itemTotal = selectedCakes.reduce(function(subTotal, cake) {
+              var itemTotal = selectedCakes.reduce(function (subTotal, cake) {
                 return subTotal + parseFloat(cake.price);
               }, 0);
               return acc + itemTotal;
@@ -179,7 +183,7 @@
           var xhr = new XMLHttpRequest();
           xhr.open('DELETE', `http://localhost:3000/cartItems/${cartId}`);
           xhr.setRequestHeader('Content-Type', 'application/json;charset=UTF-8');
-          xhr.onreadystatechange = function() {
+          xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
               if (xhr.status === 200) {
                 Swal.fire('Removed!', 'The item has been removed from the cart.', 'success');
@@ -194,9 +198,41 @@
       });
     }
 
-    function redirectToOrders() {
-      window.location.href = 'orders.html';
+  function buyNow(event) {
+  event.preventDefault();
+
+  // Retrieve cake details
+  var cartItem = event.target.parentNode;
+  var cakeName = cartItem.querySelector('h3').textContent;
+  var cakePrice = parseFloat(cartItem.querySelector('p').textContent.split('₹')[1]);
+  var cakeImage = cartItem.querySelector('img').src;
+
+  // Create the order item object
+  var orderItem = {
+    image: cakeImage,
+    name: cakeName,
+    price: cakePrice
+  };
+
+  // Post the order item to the server
+  var xhr = new XMLHttpRequest();
+  xhr.open('POST', 'http://localhost:3000/order', true);
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.onreadystatechange = function() {
+  if (xhr.readyState === 4) {
+    if (xhr.status === 200 || xhr.status === 201) {
+      alert('Order placed successfully!');
+      loadCartItems(); // Reload the cart items after placing the order
+    } else {
+      alert('Failed to place the order. Please try again.');
     }
+  }
+};
+
+  xhr.send(JSON.stringify({ orderItems: [orderItem] }));
+}
+
   </script>
 </body>
+
 </html>

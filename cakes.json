@@ -67,12 +67,42 @@
     {
       "orderItems": [
         {
-          "image": "\\asset\\images\\cake1.jpg",
+          "image": "http://127.0.0.1:5500/asset/images/cake2.jpg",
+          "name": "Oreo cheese Burst Cake",
+          "price": 1250
+        }
+      ],
+      "id": 1
+    },
+    {
+      "orderItems": [
+        {
+          "image": "asset\\images\\cake5.webp",
+          "name": "Vanilla Buttercream Cake",
+          "price": 1250
+        }
+      ],
+      "id": 2
+    },
+    {
+      "orderItems": [
+        {
+          "image": "http://127.0.0.1:5500/asset/images/cake1.jpg",
           "name": "Creamy Cloud Cheesecake",
           "price": 1450
         }
       ],
-      "id": 1
+      "id": 3
+    },
+    {
+      "orderItems": [
+        {
+          "image": "http://127.0.0.1:5500/asset/images/cake1.jpg",
+          "name": "Creamy Cloud Cheesecake",
+          "price": 1450
+        }
+      ],
+      "id": 4
     }
   ],
   "sales": [
@@ -84,28 +114,75 @@
       "size": "1/2",
       "cakeName": "choco truffle cake",
       "id": 1
+    },
+    {
+      "paymentMethod": "UPI",
+      "cost": "2710",
+      "deliveryDate": "2023-06-05",
+      "message": "happy anniversary",
+      "size": "1 kg",
+      "cakeName": "KitKat Cookie choco Delight",
+      "id": 2
+    },
+    {
+      "paymentMethod": "Cash",
+      "cost": "4510",
+      "deliveryDate": "2023-06-30",
+      "message": "happy birthday",
+      "size": "1/2 kg",
+      "cakeName": "Ocean Mist Macaron Cake",
+      "id": 3
+    },
+    {
+      "paymentMethod": "UPI",
+      "cost": "12",
+      "deliveryDate": "2023-06-08",
+      "message": "kjh",
+      "size": "kj",
+      "cakeName": "Ocean Mist Macaron Cake",
+      "id": 4
+    },
+    {
+      "paymentMethod": "UPI",
+      "cost": "3950",
+      "deliveryDate": "2023-06-06",
+      "message": "happy birthday",
+      "size": "1/2",
+      "cakeName": "Creamy Cloud Cheesecake, Ocean Mist Macaron Cake",
+      "id": 5
+    },
+    {
+      "paymentMethod": "UPI",
+      "cost": "56",
+      "deliveryDate": "2023-06-10",
+      "message": "ty",
+      "size": "1",
+      "cakeName": "Creamy Cloud Cheesecake, Vanilla Buttercream Cake",
+      "id": 6
     }
   ],
+  "login-details": [],
+  "register-details": [],
   "cartItems": [
     {
       "cartItems": [
         {
-          "image": "asset\\images\\cake7.webp",
-          "name": "Ocean Mist Macaron Cake",
-          "price": 1345
+          "image": "\\asset\\images\\cake1.jpg",
+          "name": "Creamy Cloud Cheesecake",
+          "price": 1450
         }
       ],
-      "id": 11
+      "id": 1
     },
     {
       "cartItems": [
         {
-          "image": "asset\\images\\cake2.jpg",
-          "name": "Oreo cheese Burst Cake",
-          "price": 1250
+          "image": "asset\\images\\cakes6.jpg",
+          "name": "KitKat Hazelnut Indulgence",
+          "price": 1345
         }
       ],
-      "id": 12
+      "id": 2
     }
   ]
 }

@@ -18,6 +18,7 @@ body {
   }
    #head-div{
     margin-top: -130px;
+    padding-bottom: 30px;
     background-color: #350335ee ;
    }
 
@@ -36,7 +37,12 @@ body {
       display: none;
     }
   }
-
+@media (max-width:768px){
+  #h2{
+    margin-left: 500px;
+    width: 20px;
+  }
+}
   @media (max-width: 768px) {
     /* Styles for screens smaller than 768px */
     header {
@@ -77,13 +83,15 @@ body {
     font-family: logo;
     font-size: 20px;
   }
+  .navbar-toggler-icon{
+    color: #991329;
+  }
 
   #navbarNavDropdown ul li a {
     text-decoration: none;
-    color: #f1eaea;
+    color: #cf3636;
     font-family: logo;
   }
-
 
   main {
     padding: 20px;
@@ -455,6 +463,36 @@ footer {
   }
 }
 
+@media(min-width:320px){
+  #gh1 {
+  font-size: 5px;
+  margin-left: 150px;
+ animation: none;
+}
+}
+@media(min-width:768px){
+  #gh1 {
+    
+      font-size:10px;
+      margin-left: 296px;
+      
+    }
+    
+  }
+  
+@media(min-width:1024px){
+  #gh1 {
+    font-size:10px;
+    margin-left: 100px;
+    
+  }
+}
+@media(min-width:768px){
+  #navbarstyling{
+    color: #aaa;
+  }
+}
+
 #at{
   text-decoration: none;
   background-color: #55ACEE;
@@ -485,8 +523,11 @@ footer {
   animation: scaleAndColorChange 5s infinite;
   margin-top: -150px;
   font-family: logo;
-  font-size: 46px;
-  padding-bottom: 100px;
+  font-size: 35px;
+  padding-bottom: 50px;
+  width: 603px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /* ----------------------------- */
 

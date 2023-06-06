@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Order Details</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
-</head>
 <style>
   #order-container,
   h1 {
@@ -27,10 +20,15 @@
   .order-button {
     font-size: 25px;
     font-family: logo;
-    margin-left: 300px;
+    margin-left: 350px;
     background-color: rgb(248, 219, 57);
   }
-
+  .login{
+    font-size: 25px;
+    font-family: logo;
+    margin-left: 50px;
+    background-color: rgb(248, 219, 57);
+  }
   #b1 {
     text-decoration: none;
     background-color: rgba(180, 236, 218, 0.849);
@@ -47,7 +45,79 @@
   #p1{
     font-size: 35px;
   }
-</style>
+  .align-label {
+  display: inline-block;
+  width: 120px;
+  text-align: right;
+  padding-right: 10px;
+  margin-bottom: 5px;
+}
+.input-cell input,
+.input-cell textarea {
+  width: 100%;
+  height: 30px;
+}
+.checkbox-label{
+  width: 100%;
+  
+}
+#cake1,#cake2,#cake3,#cake4,#cake5,#cake6,#cake7,#cake8,#cake9,#cake10{
+  width: 30px;
+}
+.input-cell select{
+  width: 103%;
+  height: 32px;
+}
+#delivery-date{
+  width: 101%;
+  height: 32px;
+}
+table,tr,td,title{
+  font-family: cursive;
+  font-size:20px;
+ 
+}
+option{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+.login-alert-title {
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .login-alert-content {
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  .login-alert-button {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .swal-text{
+      font-size: 28px;
+  }
+  .swal-button{
+    background-color: rgb(223, 15, 15);
+    color: aliceblue;
+  }
+  .swal-button:hover{
+    background-color: rgba(8, 22, 46, 0.397) !important;
+  }
+  .swal-modal{
+    background-color: rgb(172, 226, 233);
+  }
+  .swal2-popup {
+    background-color: rgb(172, 226, 233);
+        }
+</style><!DOCTYPE html>
+<html>
+
+<head>
+  <title>Order Details</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.css">
+</head>
+
 
 <body>
   <a href="index.html" id="b1">Back</a>
@@ -59,6 +129,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
   <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
   <script>
     $(document).ready(function () {
       // Fetch cake data from the JSON file
@@ -95,39 +166,87 @@
       $(document).on('click', '.order-button', function () {
   Swal.fire({
     title: 'Order Cake',
-    html:
-      '<label for="payment-method">Payment Method:</label>' +
-      '<select id="payment-method" class="swal2-input">' +
-      '  <option value="UPI">UPI</option>' +
-      '  <option value="Card">Credit/Debit Card</option>' +
-      '  <option value="Cash">Cash</option>' +
-      '</select><br>' +
-      '<label for="cost">Cost:</label>' +
-      '<input type="number" id="cost" class="swal2-input" placeholder="Enter Cost">' +
-      '<label for="delivery-date">Delivery Date:</label>' +
-      '<input type="date" id="delivery-date" class="swal2-input"><br>' +
-      '<label for="message">Message:</label>' +
-      '<input type="text" id="message" class="swal2-input" placeholder="Enter Message">' +
-      '<label for="size">Size:</label>' +
-      '<input type="text" id="size" class="swal2-input" placeholder="Enter Size"><br>' +
-      '<label for="cake-name">Cake Name:</label>' +
-      '<input type="text" id="cake-name" class="swal2-input" placeholder="Enter Cake Name">',
+    html: '<style>.checkbox-label { display: flex; align-items: center; }</style>' +
+      '<div class="container" id="sweetalert"><table >' +
+      '<tr>' +
+      '<td><label class="align-label" for="payment-method">Payment Method:</label></td>' +
+      '<td class="input-cell"><select id="payment-method" class="form-control">' +
+      '<option value="UPI">UPI</option>' +
+      '<option value="Card">Credit/Debit Card</option>' +
+      '<option value="Cash">Cash</option>' +
+      '</select></td>' +
+      '</tr>' +
+      '<tr>' +
+      '<td><label class="align-label" for="cost">Cost:</label></td>' +
+      '<td class="input-cell"><input type="number" id="cost" class="form-control" placeholder="Enter Cost"></td>' +
+      '</tr>' +
+      '<tr>' +
+      '<td><label class="align-label" for="delivery-date">Delivery Date:</label></td>' +
+      '<td class="input-cell"><input type="date" id="delivery-date" class="form-control"></td>' +
+      '</tr>' +
+      '<tr>' +
+      '<td><label class="align-label" for="message">Message:</label></td>' +
+      '<td class="input-cell"><textarea type="text" id="message" class="form-control" placeholder="Enter Message"></textarea></td>' +
+      '</tr>' +
+      '<tr>' +
+      '<td><label class="align-label" for="size">Size:</label></td>' +
+      '<td class="input-cell"><input type="text" id="size" class="form-control" placeholder="Enter Size"></td>' +
+      '</tr>' +
+      '<tr>' +
+      '<td id="cn"><label class="align-label" for="cake-name">Cake Name:</label></td>' +
+      '<td class="input-cell">' +
+      '<div class="checkbox-label"><input type="checkbox" id="cake1" name="cake-name" value="Creamy Cloud Cheesecake">' +
+      '<label for="cake1">Creamy Cloud Cheesecake</label></div>' +
+      '<div class="checkbox-label"><input type="checkbox" id="cake2" name="cake-name" value="Oreo cheese Burst Cake">' +
+      '<label for="cake2">Oreo cheese Burst Cake</label></div>' +
+      '<div class="checkbox-label"><input type="checkbox" id="cake3" name="cake-name" value="KitKat Hazelnut Indulgence">' +
+      '<label for="cake3">KitKat Hazelnut Indulgence</label></div>' +
+      '<div class="checkbox-label"><input type="checkbox" id="cake4" name="cake-name" value="Ocean Mist Macaron Cake">' +
+      '<label for="cake4">Ocean Mist Macaron Cake</label></div>' +
+      '<div class="checkbox-label"><input type="checkbox" id="cake5" name="cake-name" value="Stormy Grey Macaron Bliss">' +
+      '<label for="cake5">Stormy Grey Macaron Bliss</label></div>' +
+      '<div class="checkbox-label"><input type="checkbox" id="cake6" name="cake-name" value="Lavender Chocalate Delight">' +
+      '<label for="cake6">Lavender Chocalate Delight</label></div>' +
+      '<div class="checkbox-label"><input type="checkbox" id="cake7" name="cake-name" value="Vanilla Buttercream Cake">' +
+      '<label for="cake7">Vanilla Buttercream Cake</label></div>' +
+      '<div class="checkbox-label"><input type="checkbox" id="cake8" name="cake-name" value="Chocolate Espresso Delight">' +
+      '<label for="cake8">Chocolate Espresso Delight</label></div>' +
+      '<div class="checkbox-label"><input type="checkbox" id="cake9" name="cake-name" value="KitKat Cookie choco Delight">' +
+      '<label for="cake9">KitKat Cookie choco Delight</label></div>' +
+      '<div class="checkbox-label"><input type="checkbox" id="cake10" name="cake-name" value="Chocolate Mousse Magic">' +
+      '<label for="cake10">Chocolate Mousse Magic</label></div>' +
+      '</td>' +
+      '</tr>' +
+      '</table></div> ',
     focusConfirm: false,
     showCancelButton: true,
-    cancelButtonColor:'#d33',
+    cancelButtonColor: '#d33',
     preConfirm: function () {
       var paymentMethod = document.getElementById('payment-method').value;
       var cost = document.getElementById('cost').value;
       var deliveryDate = document.getElementById('delivery-date').value;
       var message = document.getElementById('message').value;
       var size = document.getElementById('size').value;
-      var cakeName = document.getElementById('cake-name').value;
+      var cakeName = [];
+      var checkboxes = document.getElementsByName('cake-name');
+      for (var i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          cakeName.push(checkboxes[i].value);
+        }
+      }
 
       // Validate input fields
-      if (!paymentMethod || !cost || !deliveryDate || !message || !size || !cakeName) {
+      if (!paymentMethod || !cost || !deliveryDate || !message || !size || cakeName.length === 0) {
         Swal.showValidationMessage('Please fill in all fields');
       } else {
-        return { paymentMethod: paymentMethod, cost: cost, deliveryDate: deliveryDate, message: message, size: size, cakeName: cakeName };
+        return {
+          paymentMethod: paymentMethod,
+          cost: cost,
+          deliveryDate: deliveryDate,
+          message: message,
+          size: size,
+          cakeName: cakeName.join(", ")
+        };
       }
     }
   }).then(function (result) {
@@ -148,8 +267,8 @@
         'Cake Name: ' + cakeName;
 
       Swal.fire(
-        'Ordered!',
-        'Your cake has been ordered successfully.<br>' + orderDetails,
+        'Ordered Successfully!',
+        'Thank you For purchasing.<br>' + orderDetails,
         'success'
       );
 
@@ -173,7 +292,7 @@
       xhr.setRequestHeader('Content-Type', 'application/json');
 
       // Define the callback function to handle the response
-      xhr.onreadystatechange = function() {
+      xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE) {
           if (xhr.status === 200) {
             console.log('Form data saved successfully');
@@ -192,8 +311,93 @@
   });
 });
     });
+    function showLoginAlert() {
+    swal({
+      title: "Login or Register to continue Order",
+      text: "Didn't have a Account - Register ",
+      buttons: {
+        login: {
+          text: "Login",
+          value: "login"
+        },
+        register: {
+          text: "Register",
+          value: "register"
+        },
+        Cancel:true
+      },
+      customClass: {
+        title: 'login-alert-title',
+        content: 'login-alert-content',
+        confirmButton: 'login-alert-button',
+        
+      },
+      closeOnClickOutside: true,
+    })
+    .then(function(value) {
+      // Handle the button click
+      if (value === "login") {
+        // Redirect to login.html
+        window.location.href = "login.html";
+      } else if (value === "register") {
+        // Redirect to register.html
+        window.location.href = "register.html";
+      }
+    });
+  }
+  function storeLoginDetails(username, password) {
+    var loginDetails = {
+      username: username,
+      password: password
+    };
+
+    // Send the loginDetails object as JSON to the server
+    fetch('http://localhost:3000/login-details', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(loginDetails)
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert('Login details stored:', data);
+      // Additional actions or logic after storing the login details
+    })
+    .catch(error => {
+      alert('Error storing login details:', error);
+      // Handle the error appropriately
+    });
+  }
+
+  function storeRegisterDetails(name, email, password) {
+    var registerDetails = {
+      name: name,
+      email: email,
+      password: password
+    };
+
+    // Send the registerDetails object as JSON to the server
+    fetch('http://localhost:3000/register-details', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(registerDetails)
+    })
+    .then(response => response.json())
+    .then(data => {
+      alert('Register details stored:', data);
+      // Additional actions or logic after storing the register details
+    })
+    .catch(error => {
+      alert('Error storing register details:', error);
+      // Handle the error appropriately
+    });
+  }
   </script>
   <button class="order-button">Order</button>
+  <button class="login"  onclick="showLoginAlert()">login</button>
 </body>
 
 </html>

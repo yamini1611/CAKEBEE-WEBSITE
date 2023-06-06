@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
   var selectedCakes = []; // Array to store selected cake details
 
@@ -111,36 +112,6 @@ $(document).ready(function() {
     }
   });
 });
-
-// Open login form
-function openLoginForm() {
-  $('#login-modal').css('display', 'block');
-}
-
-// Close login form
-function closeLoginForm() {
-  $('#login-modal').css('display', 'none');
-}
-
-// Open register form
-function openRegisterForm() {
-  $('#register-modal').css('display', 'block');
-}
-
-// Close register form
-function closeRegisterForm() {
-  $('#register-modal').css('display', 'none');
-}
-
-// Open cart modal
-function openCart() {
-  $('#cart-modal').css('display', 'block');
-}
-
-// Close cart modal
-function closeCart() {
-  $('#cart-modal').css('display', 'none');
-}
 
 
 
